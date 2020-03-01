@@ -1,22 +1,14 @@
 <div class="text-info">
-	<h2 class="title">titulo</h2>
+	<h2 class="title">{{data.title}}</h2>
 	<div class="comment">
-		<p>
-			La descripcion va aqui, la descripcion va aqui,
-			la descripcion tenri que ir como por aqui, la descripcion va aqui,
-			la descripcion va aqui, la descripcion tenri que ir como por aqui.
-		</p>
-		<p>
-			La descripcion va aqui, la descripcion va aqui,
-			la descripcion tenri que ir como por aqui, la descripcion va aqui,
-			la descripcion va aqui, la descripcion tenri que ir como por aqui.
-		</p>
+		{{data.description}}
 	</div>
 </div>
 <div class="image">
 	<img src="assets/img/{{data.image}}" alt="imagen">
 </div>
 <div class="category-info">
-	<div><a class="category">#acuarela <i class="icon icon-arrow-right"></i></a></div>
-	<div><a class="category">#paisaje <i class="icon icon-arrow-right"></i></a></div>
+	<div *ngFor="let category of data.categories">
+		<a class="category">#{{category}} <i class="icon icon-arrow-right"></i></a>
+	</div>
 </div>

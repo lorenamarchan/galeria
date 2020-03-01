@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +16,8 @@ import { GalleryModule } from './pages/gallery/gallery.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GalleryModule
+    GalleryModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
