@@ -1,0 +1,19 @@
+.category {
+    background: #e8e8e8;
+    &.cat-1 {
+        background: #a2e0d0;
+        background: linear-gradient(90deg, #a2e0d0 10%, #ebb1b1 90%);
+    }
+    &.cat-2 {
+        background: #c5abea;
+        background: linear-gradient(90deg, #c5abea 10%, #28a392 90%);
+    }
+    &.cat-3 {
+        background: #c5abea;
+        background: linear-gradient(90deg, #e2daad 10%, #ee8483 90%);
+    }
+    &.cat-4 {
+        background: #c5abea;
+        background: linear-gradient(90deg, #d88586 10%, #a087e8 90%);
+    }
+}

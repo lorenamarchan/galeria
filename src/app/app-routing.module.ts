@@ -5,7 +5,11 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 const routes: Routes = [
   { path: '',
      component: GalleryComponent,
-    pathMatch: 'full'
+    data: {animation: 'routeAnimations'},
+  },
+  { path: ':id',
+     component: GalleryComponent,
+    data: {animation: 'routeAnimations'},
   },
 ];
 

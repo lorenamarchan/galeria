@@ -1,8 +1,10 @@
 app-gallery-item {
 	display: inline-flex;
 	align-items: center;
-	margin: 60px 0;
+	margin: 30px 0;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 	> div {
 		margin: 0 15px;
 		flex-basis: 100%;
@@ -11,14 +13,41 @@ app-gallery-item {
 	.image {
 		height: auto;
 		width: 450px;
-		background: #f4f4f4;
+		padding: 30px;
 		flex-shrink: 0;
 		flex-basis: auto;
 		position: relative;
 		z-index: 1;
+		border-radius: 16px;
+		background: #ffffff;
+		box-shadow: 0 0 30px rgba(0,0,0,0.08), 2px 1px 2px rgba(0,0,0,0.03);
+		overflow: hidden;
+		/*&::after {
+			content: "";
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(rgb(116, 116, 116), #000);
+			position: absolute;
+			border-radius: 16px;
+			top: 1px;
+			left: 1px;
+			opacity: 0.02;
+		}
+		&::before {
+			content: "";
+			height: calc(100% - 4px);
+			width: calc(100% - 4px);
+			background: linear-gradient(rgb(116, 116, 116), #000);
+			position: absolute;
+			border-radius: 16px;
+			top: 2px;
+			left: 2px;
+			opacity: 0.02;
+		}*/
 		img {
 			width: 100%;
-    	height: auto;
+    		height: auto;
+			border-radius: 3px;
 		}
 	}
 	.text-info {
@@ -43,11 +72,16 @@ app-gallery-item {
 		.category {
 			display: inline-flex;
 			align-items: center;
-			margin: 2px 0;
-			background: #e8e8e8;
-			padding: 4px 4px 4px 8px;
+			margin: 4px 0;
+			padding: 4px 16px;
 			border-radius: 22px;
 			cursor: pointer;
+			text-decoration: none;
+			color: #ffffff;
+			font-size: 9px;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 			.icon {
 				opacity: 0;
 				width: auto;
@@ -60,9 +94,10 @@ app-gallery-item {
 				display: inline-block;
 				border-radius: 50%;
 				margin-left: 4px;
-				color: #b9b9b9;
+				color: #ffffff;
 			}
 			&:hover {
+				text-decoration: none;
 				.icon {
 					opacity: 1;
 					max-width: 22px;
