@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-item',
@@ -10,7 +10,6 @@ import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 
 export class GalleryItemComponent implements OnInit {
   @Input() data: any
-  ngOnInit(){
-    console.log(this.data.image)     
+  ngOnInit(){    
   }
 }

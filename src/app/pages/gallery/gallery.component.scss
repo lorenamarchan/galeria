@@ -1,4 +1,6 @@
 app-gallery {
+	display: block;
+	position: relative;
 	.container {
 		width: 100%;
 		max-width: 1024px;
@@ -6,3 +8,7 @@ app-gallery {
 		margin: auto;
 	}
 }
+.paisajes {
+	background: #dff7f1;
+}
+

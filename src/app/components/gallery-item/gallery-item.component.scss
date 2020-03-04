@@ -3,6 +3,8 @@ app-gallery-item {
 	align-items: center;
 	margin: 60px 0;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 	> div {
 		margin: 0 15px;
 		flex-basis: 100%;
@@ -43,11 +45,16 @@ app-gallery-item {
 		.category {
 			display: inline-flex;
 			align-items: center;
-			margin: 2px 0;
-			background: #e8e8e8;
-			padding: 4px 4px 4px 8px;
+			margin: 4px 0;
+			padding: 4px 16px;
 			border-radius: 22px;
 			cursor: pointer;
+			text-decoration: none;
+			color: #ffffff;
+			font-size: 9px;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 2px;
 			.icon {
 				opacity: 0;
 				width: auto;
@@ -60,9 +67,10 @@ app-gallery-item {
 				display: inline-block;
 				border-radius: 50%;
 				margin-left: 4px;
-				color: #b9b9b9;
+				color: #ffffff;
 			}
 			&:hover {
+				text-decoration: none;
 				.icon {
 					opacity: 1;
 					max-width: 22px;
