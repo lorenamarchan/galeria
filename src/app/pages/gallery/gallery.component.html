@@ -1,3 +1,5 @@
+
 <div class="container">
+	<app-gallery-item-form *ngIf="editorEnabled" form=true></app-gallery-item-form>
 	<app-gallery-item *ngFor="let item_data of items" [data]="item_data"></app-gallery-item>
 </div>

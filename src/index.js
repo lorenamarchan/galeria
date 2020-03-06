@@ -36,7 +36,7 @@ var ItemsSchema = new Schema({
   
 var model = mongo.model('items', ItemsSchema);  
   
-app.post("/api/SaveUser",function(req, res){   
+app.post("/api/SaveItem",function(req, res){   
  var mod = new model(req.body);  
  if(req.body.mode =="Save")  
  {  
@@ -65,7 +65,7 @@ else
 }  
  })  
   
- app.post("/api/deleteUser",function(req,res){      
+ app.post("/api/deleteItem",function(req,res){      
     model.remove({ _id: req.body.id }, function(err) {    
      if(err){    
          res.send(err);    

@@ -2,6 +2,7 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import { DdbbService } from 'src/app/services/ddbb.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from './../../../environments/environment';
 
 
 @Component({
@@ -14,9 +15,8 @@ export class GalleryComponent implements AfterViewInit {
   constructor(public dataService: DdbbService, public router:Router, public route:ActivatedRoute, public elRef:ElementRef) { }
   title = 'galería'
   items: Object  
-   
-  ngAfterViewInit() {
-    
+  editorEnabled = !environment.production  
+  ngAfterViewInit() {    
     this.dataService.GetItems().subscribe((data) => {return this.items = data.reverse()})
     this.route.params.subscribe((value)=>{
       let category = value.id
