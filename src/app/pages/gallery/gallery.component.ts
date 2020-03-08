@@ -17,10 +17,15 @@ export class GalleryComponent implements AfterViewInit {
   items: Object  
   editorEnabled = !environment.production  
   ngAfterViewInit() {    
-    this.dataService.GetItems().subscribe((data) => {return this.items = data.reverse()})
     this.route.params.subscribe((value)=>{
       let category = value.id
       this.elRef.nativeElement.classList.add(category)
+      if(category){
+        this.dataService.getItemsByCategory(category).subscribe((data) => {return this.items = data.reverse()})
+      }
+      else{
+        this.dataService.getItems().subscribe((data) => {return this.items = data.reverse()})
+      }
     })
   }
 }

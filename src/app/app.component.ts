@@ -14,7 +14,6 @@ import { SlideInAnimation } from './animations/slide-page.animation';
 export class AppComponent {
   title = 'recopilacion dibujos';
   prepareRoute(outlet: RouterOutlet) {
-    console.log(outlet.activatedRouteData['animation']);
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 }

@@ -11,17 +11,26 @@ export class DdbbService {
   
   constructor(private http: Http) { }  
   
-  saveUser(user){      
-    return this.http.post('http://localhost:8080/api/SaveUser/', user)  
+  saveItem(user){      
+    return this.http.post('http://localhost:8080/api/SaveItem/', user)  
             .map((response: Response) =>response.json())              
   }  
   
-  GetItems(){       
-    return this.http.get('http://localhost:8080/api/getItems/')  
-            .map((response: Response) => response.json())              
+  upload(file){       
+    return this.http.post('http://localhost:8080/api/Upload/', file)  
+            .map((response: Response) => response)              
   }  
- deleteUser(id){   
-    return this.http.post('http://localhost:8080/api/deleteUser/',{'id': id})  
+  
+  getItemsByCategory(category){    
+    return this.http.get('http://localhost:8080/api/GetItemsByCategory/', {params: {"category": category}})  
+            .map((response: Response) => response.json())     
+  }  
+  getItems(){       
+    return this.http.get('http://localhost:8080/api/GetItems/')  
+            .map((response: Response) => response.json())     
+  }  
+ deleteItem(id){   
+    return this.http.post('http://localhost:8080/api/DeleteItem/',{'id': id})  
             .map((response: Response) =>response.json())               
   }  
   

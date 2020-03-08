@@ -22,10 +22,10 @@ html {
 	font-size: 14px
 }
 
-body {
+body, textarea, p {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 300;
-	color: #aaa;
+	color: #4a565f;
 	line-height: 1.25;
 	font-size: 1rem;
 	padding: 0;
@@ -33,8 +33,15 @@ body {
 
 h1, h2, h3, h4, h5, h6{
 	font-weight: 400;
-	color: #777;
+	color: #4a565f;
 }
 input {
 	font-family: 'Rubik', sans-serif;
+}
+
+.editor-action {
+	//background: linear-gradient(135deg, lighten(#C3468C, 15%) 0%, lighten(#3F527A, 15%) 100%) !important;
+	background: linear-gradient(135deg, #C3468C 0%, #3F527A 100%) !important;
+	color: #ffffff !important;
+	transition: background 300ms ease-in-out;
 }

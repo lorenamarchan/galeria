@@ -1,13 +1,13 @@
 PLAN DE ACCIONES:
 
 - Añadir categoria:
-- - hacer estilos
-- - funcionalidad preparar input a añadir en el dom
+- - - hecho - - - hacer estilos
+- - - hecho - - - funcionalidad preparar input a añadir en el dom
 - - funcionalidad de relleno del array de categorias
 
 - Añadir imagen:
 - - Mirar como se guardan las imagen
-- - hacer que la imagen sea el boton
+- - - hecho - - - hacer que la imagen sea el boton 
 
 - Añadir titulo:
 - - funcionalidad de relleno del titulo
@@ -16,5 +16,5 @@ PLAN DE ACCIONES:
 - - funcionalidad de relleno de la descripcion
 
 - Guardado de datos:
-- - estilos del boton
+- - - hecho - - - estilos del boton
 - - funcionalidad de guardado en mongoDB

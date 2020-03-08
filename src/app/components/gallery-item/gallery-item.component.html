@@ -1,14 +1,54 @@
-<div class="text-info">
-	<h2 class="title">{{data.title}}</h2>
-	<div class="comment">
-		{{data.description}}
+<ng-container *ngIf="realItem; else editor">
+	<div class="text-info">
+		<h2 class="title">{{data.title}}</h2>
+		<div class="comment">
+			{{data.description}}
+		</div>
 	</div>
-</div>
-<div class="image">
-	<img src="assets/img/{{data.image}}" alt="imagen">
-</div>
-<div class="category-info">
-	<div *ngFor="let category of data.categories">
-		<a href="/{{category}}"class="category">#{{category}} <i class="icon icon-arrow-right"></i></a>
+	<div class="image">
+		<img src="assets/img/{{data.image}}" alt="imagen">
+		<div class="actions">
+		<div class="delete editor-action" (click)="delete($event)">
+			<i class="icon icon-trash"></i>
+		</div>
+		<div class="edit editor-action" (click)="edit($event)">
+			<i class="icon icon-edit"></i>
+		</div>
+		</div>
 	</div>
-</div>
+	<div class="category-info">
+		<div *ngFor="let category of data.categories">
+			<a href="/cat/{{category.url}}"class="category {{category.url}}"><div id="{{category.url}}">{{category.value}}</div> <i class="icon icon-arrow-right"></i></a>
+		</div>
+	</div>
+</ng-container>
+
+<ng-template #editor>
+	<div class="text-info">
+		<input type="text" class="title" value="{{data.title}}" to-save="title">
+		<textarea autosize class="comment" to-save="description">{{data.description}}</textarea>
+	</div>
+	<div class="image">
+		<label class="custom-file-upload">
+		<img [src]="imagePreview" alt="imagen">
+		<input type="file" name="fileToUpload" id="fileToUpload" to-save="image">
+		</label>
+		<div class="actions">
+			<div class="save editor-action" (click)="cancel($event)">
+				<i class="icon icon-times"></i>
+			</div>
+			<div class="cancel editor-action" (click)="save($event)">
+				<i class="icon icon-tick"></i>
+			</div>
+		</div>
+	</div>
+	<div class="category-info">
+		<div class="category add-category editor-action" (click)="addCategory($event)">
+			<i class="icon icon-plus"></i>
+			Añadir categoria
+		</div>
+		<div *ngFor="let category of data.categories">
+			<input class="category {{category.url}}" value="{{category.value}}">
+		</div>
+	</div>
+</ng-template>

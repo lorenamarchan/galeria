@@ -2,7 +2,7 @@
 	font-family: 'icons';
 	src: url('assets/fonts/typicons.ttf');
 	font-weight: normal;
-	font-style: normal;
+	font-style: swap;
 }
   
 .icon:before {
@@ -11,8 +11,8 @@
 	font-weight: normal;
 	display: inline-block;
 	text-decoration: inherit;
-	width: 1em;
-	height: 1em;
+	width: 1rem;
+	height: 1rem;
 	font-size: 1em;
 	text-align: center;
 	text-rendering: optimizeLegibility;

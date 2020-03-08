@@ -7,7 +7,7 @@ const routes: Routes = [
      component: GalleryComponent,
     data: {animation: 'routeAnimations'},
   },
-  { path: ':id',
+  { path: 'cat/:id',
      component: GalleryComponent,
     data: {animation: 'routeAnimations'},
   },
